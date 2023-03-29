@@ -1,7 +1,10 @@
 import { Text, View, StyleSheet, Image, Button, Alert, TextComponent } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 import GridImageView from 'react-native-grid-image-viewer';
 
-const Movies = () => {
+import InfoId from "./InfoId";
+
+const Movies = ({ navigation }) => {
     return (
       <View style={styles.background}>
         <Text style={styles.headline_text}>My Favorite Movies</Text>
@@ -15,7 +18,24 @@ const Movies = () => {
                                 'https://bit.ly/3FZpZCu',
                                 'https://bit.ly/3KiUJAQ',
                                 'https://bit.ly/3nt6qvZ']} />
+
+      <Button 
+              title="Back"
+              onPress={() => {
+                Alert.alert("Back", "Would you like to go back?", [
+                  {
+                    text: "Yes",
+                    onPress: () => {
+                      navigation.navigate("My ID");
+                    },
+                  },
+                  { text: "No" },
+                ]);
+              }}
+            />
        </View>
+
+       
     );
   };
   

@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { NavigationContainer } from "@react-navigation/native";
+
 import { useState } from "react";
 import Hobbies from './Hobbies';
 import Movies from './Movies';
@@ -29,15 +29,7 @@ export default function InfoId({ navigation }) {
       <Button 
         title="Hobbies"
         onPress={() => {
-          Alert.alert("Proceed", "Would you like to proceed?", [
-            {
-              text: "Yes",
-              onPress: () => {
                 navigation.navigate("My Hobbies");
-              },
-            },
-            { text: "No" },
-          ]);
         }}
       />
      

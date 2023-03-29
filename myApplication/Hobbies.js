@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, Image, Button, Alert, TextComponent } from "react-native";
 import GridImageView from 'react-native-grid-image-viewer';
 
-const Hobbies = () => {
+const Hobbies = ({ navigation }) => {
     return (
       <View style={styles.background}>
         <Text style={styles.headline_text}>My Hobbies</Text>
@@ -15,6 +15,22 @@ const Hobbies = () => {
                                 'https://bit.ly/3zdrl95',
                                 'https://bit.ly/3nlg03W',
                                 'https://bit.ly/3Zv1q7o']} />
+       <View style={{marginBottom: 20}}>
+          <Button 
+              title="Back"
+              onPress={() => {
+                Alert.alert("Back", "Would you like to go back?", [
+                  {
+                    text: "Yes",
+                    onPress: () => {
+                      navigation.navigate("My ID");
+                    },
+                  },
+                  { text: "No" },
+                ]);
+              }}
+            />  
+        </View>
        </View>
     );
   };
