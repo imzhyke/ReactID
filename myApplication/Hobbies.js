@@ -4,16 +4,17 @@ import GridImageView from 'react-native-grid-image-viewer';
 const Hobbies = () => {
     return (
       <View style={styles.background}>
-        <Text style={styles.headline_text}>My Favorite Games</Text>
+        <Text style={styles.headline_text}>My Hobbies</Text>
         <Text style={styles.explore_text}>
           Click on an image to view in full screen mode
         </Text>
   
         {/* Basic Usage */}
-        <GridImageView data={[ 'https://bit.ly/42MseTw',
-                                'https://bit.ly/3Ki0uiw',
-                                'https://bit.ly/3nyLbc3',
-                                'https://bit.ly/412gyun']} />
+        <GridImageView data={[ 'https://bit.ly/3ZpfwHs',
+                                'https://bit.ly/3ZrTkwv',
+                                'https://bit.ly/3zdrl95',
+                                'https://bit.ly/3nlg03W',
+                                'https://bit.ly/3Zv1q7o']} />
        </View>
     );
   };
@@ -28,9 +29,9 @@ const Hobbies = () => {
       fontSize: 30,
       fontWeight: 'bold',
       marginTop: 50,
-      marginLeft: 20,
+     
       color: 'gold',
-      marginLeft: 50,
+      marginLeft: 100,
     },
     explore_text: {
       marginTop: 5,

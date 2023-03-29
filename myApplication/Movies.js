@@ -30,6 +30,8 @@ const Movies = () => {
       fontWeight: 'bold',
       marginTop: 50,
       marginLeft: 20,
+      color: 'gold',
+      marginLeft: 50,
     },
     explore_text: {
       marginTop: 5,
